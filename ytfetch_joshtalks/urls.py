@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from fetchbot import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('new/', views.fetch_new_posts),  # To fetch all new videos
+    path('', views.VideoList.as_view()),  # To show all videos
 ]
