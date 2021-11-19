@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'ytfetch_joshtalks.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -117,7 +117,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-API_KEYS = ['AIzaSyBjL9ufhWOgkRnlIkub8fdld6aEV9IA0Ks', 'AIzaSyB9X384Y72y8RQ_XHDNis7gxRn5E6dC59I']
+API_KEYS = ['AIzaSyBjL9ufhWOgkRnlIkub8fdld6aEV9IA0Ks',
+            'AIzaSyB9X384Y72y8RQ_XHDNis7gxRn5E6dC59I']
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
